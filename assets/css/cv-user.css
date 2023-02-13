@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed';
+}
+
+.main {
+    padding-top: 100px;
+    background-color: rgb(241, 242, 246);
+    height: 100%;
+}
+
+.container-manage {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 25px;
+
+}
+
+.row-manage {
+    width: 100%;
+    display: flex;
+}
+
+/* CSS content-left */
+.content-left {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.image {
+    width: 800px;
+    height: 300px;
+}
+
+.content_left_bot {
+    position: relative;
+    text-decoration: none;
+    background-color: white;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.content_lt_top {
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-around;
+}
+
+.content_lt_top>h3 {
+    margin-right: 30%;
+}
+
+.create_cv {
+    border-radius: 20px;
+    background-color: #0d6efd;;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 2px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.join-cv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    transform-origin: top;
+    animation: showModal forwards .3s;
+    z-index: 1;
+}
+
+#upload-avt {
+    display: none;
+}
+
+.product-thumb > img {
+    width: 340px;
+    height: 250px;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.product-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.product-thumb {
+    position: relative;
+    height: 254px;
+    border-radius: 5px;
+    border: solid;
+
+}
+
+.overlay {
+    position: absolute;
+    display: block;
+    width: 340px;
+    height: 250px;
+    background-color: rgba(148, 144, 144, 0.658);
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.multi_button {
+    background-color: rgba(148, 144, 144, 0.658);
+    position: absolute;
+    height: 250px;
+    width: 340px;
+    top: 0px;
+    display: none;
+}
+
+.multi_button>ul {
+    width: 200px;
+    height: 250px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: rgb(0, 0, 0);
+    color: var(--c);
+    font-size: 8px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    cursor: pointer;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: rgb(228, 209, 209);
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+.product-thumb:hover .overlay {
+    display: block;
+}
+
+.product-thumb:hover .multi_button {
+    display: block;
+}
+
+/* CSS Content-right */
+.content_right {
+    margin-left: 30px;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+}
+
+.content_right-top {
+    display: flex;
+}
+
+.content_right-top-left {
+    margin: 10px 20px 0px 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    background-color: rgb(231, 227, 227);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#change-img-avt-web {
+    width: 100%;
+    height: 100%;
+}
+
+#change-img-avt-web > img {
+    width: 100%;
+    right: 100%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.upload-avt-btn {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(144, 138, 138, 1);
+    border-radius: 50%;
+    display: flex;
+}
+
+.upload-avt-btn:hover {
+    background-color: rgb(202, 194, 194);
+}
+
+.upload-avt-btn > i {
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    margin: auto;
+}
+
+
+.content_right-top-right {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.status_account {
+    margin-top: 10px;
+    background-color: rgba(95, 105, 102, 0.696);
+    margin-top: 13px;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#log-out {
+    background-color: #0d6efd;
+    margin-top: 13px;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    color: red;
+}
+.content_middle1{
+    margin: 20px 10px 0px 20px;
+    height: 20px;
+    width: 260px;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+.stt_check{
+    margin-left: 45px;
+}
+#note{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+#note_red{
+    margin-top: 15px;
+    margin-left: 45px;
+}
+.content_middle2{
+    margin: 20px 10px 0px 20px;
+    height: 20px;
+    width: 280px;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.create_cv_profile{
+    background-color: #0d6efd;
+    margin: 13px 0px 0px 90px;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.change-img-avt > img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+
+/* check box */
+
+.b {
+    display: block;
+  }
+  
+  .toggle {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #ddd;
+    overflow: hidden;
+    box-shadow: inset 0 0 2px 1px rgba(0,0,0,.05);
+  }
+  
+  .check {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 6;
+  }
+  
+    .check:checked ~ .track {
+      box-shadow: inset 0 0 0 20px #4bd863;
+    }
+  
+    .check:checked ~ .switch {
+      right: 0px;
+      left: 15px;
+      transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+      transition-property: left, right;
+      transition-delay: .05s, 0s;
+    }
+  
+  .switch {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 36px;
+    z-index: 1;
+    transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition-property: left, right;
+    transition-delay: 0s, .05s;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+  
+  .track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
+    border-radius: 40px;
+  }

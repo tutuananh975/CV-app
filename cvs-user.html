@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý CV cá nhân</title>
+    <link rel="stylesheet" href="./assets/css/cv.css">
+    <link rel="stylesheet" href="./assets/css/cv-user.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&family=Sono:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar-menu" style="background-color: #FFF;">
+        <div class="nav-left">
+            <div class="title-page-img">
+                <img id="back-home" src="./assets/imgs/title-page.png" alt="">
+            </div>
+            <div id="sample-cv-link">
+                Mẫu CV
+            </div>
+            <div id="storage-sv-link">
+                Quản lý cv
+            </div>
+        </div>
+
+        <div id="user-login-nav" style="display: flex;">
+            <div id="icon-mes">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <div id="icon-noti">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div id="avatar-user" for="upload-avt">
+                
+            </div>
+            <div id="name-user" style="cursor: pointer; font-weight: 600; font-size: 20px; margin-left: 10px;">
+
+            </div>
+        </div>
+    </div>
+
+    <input type="file" name="file" id="upload-avt">
+    <div class="main">
+        <div class="container-manage">
+            <div class="row-manage">
+                <div class="content_left">
+                    <div class="image">
+                        <a href=""> <img src="./assets/imgs/title.jpg" style="width: 800px;height: 300px;" alt=""></a>
+                    </div>
+                    <div class="content_left_bot">
+                        <div class="content_lt_top">
+                            <h3>CV đã tạo trên mindXCV</h3>
+                            <div class="create_cv" onclick="createCv()">
+                                +Tạo mới
+                            </div>
+                        </div>
+                        <ul id="products">
+                            <!-- <li>
+                                <div class="product-item">
+                                    <div class="product-top">
+                                        <div href="" class="product-thumb">
+                                            <div class="overlay"></div>
+                                            <img src="./assets/imgs/Untitled4.png" alt="">
+                                            <nav class="multi_button">
+                                                <ul>
+                                                    <li>
+                                                        Đặt làm CV chính
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                    <li>
+                                                        Đẩy top
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                    <li>
+                                                        Chia sẻ
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                    <li class="download-cv">
+                                                        <i style="font-size: 12px;"
+                                                            class="fa-sharp fa-solid fa-download"></i>
+                                                        Tải xuống
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                    <li class="delete-cv">
+                                                        <i style="font-size: 12px;" class="fa-solid fa-trash"></i>
+                                                        Xóa
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                    <li class="edit-cv">
+                                                        <i style="font-size: 12px;" class="fa-solid fa-pen"></i>
+                                                        Xem và sửa
+                                                        <span></span><span></span><span></span><span></span>
+                                                    </li>
+                                                </ul>
+
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="join-cv">
+
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="content_right">
+                    <div class="content_right-top">
+                        <div class="content_right-top-left">
+                            <div id="change-img-avt-web">
+                            </div>
+                        </div>
+                        <div class="content_right-top-right">
+                            <p style="font-size: 13px;">Chào bạn trở lại,</p>
+                            <h4 class="user_name">Hùng Trịnh</h4>
+                            <div class="status_account">
+                                <span style="font-size:12px ; color: azure;">Tài khoản đã xác thực</span>
+                            </div>
+                            <div id="log-out" class="fs-8">
+                                Đăng xuất
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_middle1">
+                        <div class="toggle">
+                            <input type="checkbox" class="check">
+                            <b class="b switch"></b>
+                            <b class="b track"></b>
+                        </div>
+                        <div class="stt_check">
+                            <span style="font-size: 17px; color: red;">Trạng thái tìm việc đang tắt</span>
+                        </div>
+                    </div>
+                    <div id="note">
+                        <span style="font-size: 12px;">Bật tìm việc để nhận được nhiều cơ hội việc làm tốt nhất từ
+                            mindXCV.</span>
+                    </div>
+                    <div class="content_middle2">
+                        <div class="toggle">
+                            <input type="checkbox" class="check">
+                            <b class="b switch"></b>
+                            <b class="b track"></b>
+                        </div>
+                        <div class="stt_check">
+                            <span style="font-size: 17px; color: rgb(5, 146, 24);">Cho phép NTD liên hệ với bạn</span>
+                        </div>
+                    </div>
+                    <div id="note">
+                        <span style="font-size: 12px;">Cho phép các Nhà tuyển dụng đã được mindXCV xác thực xem CV
+                            Online để có thể liên hệ với bạn.</span>
+                    </div>
+                    <div id="note_red">
+                        <span style="font-size: 12px; color: brown;">Khởi tạo mindXCV Profile để gia tăng cơ hội việc
+                            làm tốt</span>
+                    </div>
+                    <div style="border-radius: 10px; border: 0;" class="create_cv_profile" onclick="createCv()">
+
+                        <h6 style="font-size: 15px;">Tạo mindXCV Profile</h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/cvs-user.js"></script>
+    <script src="https://kit.fontawesome.com/375b580dbf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+
+</html>

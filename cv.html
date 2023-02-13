@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẫu cv</title>
+    <link rel="stylesheet" href="./assets/css/cv.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&family=Sono:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="navbar-menu" style="background-color: #FFF;">
+        <div class="nav-left">
+            <div class="title-page-img">
+                <img src="./assets/imgs/title-page.png" alt="">
+            </div>
+            <div id="sample-cv-link">
+                Mẫu CV
+            </div>
+            <div id="storage-sv-link">
+                Quản lý cv
+            </div>
+        </div>
+        <div class="nav-right" id="not-login-nav">
+            <button type="button" id="login-btn" class="btn btn-outline-primary">Đăng nhập</button>
+            <button type="button" class="btn btn-primary sign-up-btn change-login">Đăng ký</button>
+            <button type="button" class="btn btn-secondary">Đăng tuyển tìm hồ sơ</button>
+        </div>
+
+        <div id="user-login-nav">
+            <div id="icon-mes">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <div id="icon-noti">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div id="avatar-user">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <label for="upload-avt" id="up-load-avt-user">
+                <i class="fa-solid fa-camera"></i>
+            </label>
+            <div class="user-name-wrap">
+                <div id="name-user" class="name-user">
+                
+                </div>
+                <div class="user-action">
+                    <ul class="list-action">
+                        <li>
+                            <i class="fa-sharp fa-solid fa-upload"></i>
+                            <span>Nâng cấp tài khoản VIP</span> 
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gift"></i>
+                            <span>Kích hoạt quà tặng</span>
+                            
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Nhà tuyển dụng</span>
+                        </li>
+                        <li id="show-modal-change-pw">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Đổi mật khẩu</span>
+                        </li>
+                        <li id="log-out-btn">  
+                            <i class="fa-solid fa-circle-left log-out-icon"></i>
+                            <span>Đăng xuất</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="over-flay-change-pw" style="display: none;">
+                <div class="modal-change-pw">
+                    <form class="form-change-pw">
+                        <div class="mb-3" style="width: 50%">
+                            <label class="form-label">Mật khẩu cũ</label>
+                            <input type="password" class="form-control" id="old-pw">
+                        </div>
+                        <div class="mb-3" style="width: 50%">
+                            <label for="exampleInputPassword1" class="form-label">Mật khẩu mới</label>
+                            <input type="password" class="form-control" id="new-pw-1">
+                        </div>
+                        <div class="mb-3" style="width: 50%">
+                            <label for="exampleInputPassword1" class="form-label">Nhập lại mật khẩu mới</label>
+                            <input type="password" class="form-control" id="new-pw-2">
+                        </div>
+                        <div id="message-error-change-pw" style="color: red;"></div>
+    
+                        <div class="btns">
+                            <button type="button" class="btn btn-primary" id="change-pw-btn">Xác Nhận</button>
+                            <button type="button" class="btn btn-secondary" id="exit-modal-change-pw">Hủy</button>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="over-flay-login">
+            <div class="modal-login shadow-sm">
+                <form class="form-login" style="display: flex; flex-direction: column;">
+                    <div class="mb-3" style="width: 50%">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3" style="width: 50%">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="InputPassword">
+                    </div>
+                    <div id="message-error" style="color: red;"></div>
+
+                    <div class="btns">
+                        <button type="button" id="btn-login-here" class="btn btn-primary">Đăng nhập</button>
+                        <button type="button" class="btn btn-outline-primary sign-up-btn change-login">Đăng ký</button>
+                    </div>
+                    <button id="exit-modal-login" type="button" class="btn btn-secondary">Thoát</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" name="file" id="upload-avt">
+    <div class="main-cotainer">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 action shadow-lg bg-body rounded">
+                <h3 class="fs-6">Lựa chọn mẫu CV</h3>
+                <div class="drop-down">
+                    <div class="drop-down-header">
+                        <div class="drop-down-active text-muted fs-8">Tiếng Việt</div>
+                        <span></span>
+                    </div>
+                    <ul class="drop-down-menu text-muted fs-8">
+                        <li>Tiếng Anh</li>
+                        <li class="active-choose">Tiếng Việt</li>
+                        <li>Tiếng Nhật</li>
+                    </ul>
+                </div>
+
+                <div class="drop-down">
+                    <div class="drop-down-header">
+                        <div class="text-muted fs-8">Tất cả ngành nghề</div>
+                        <span></span>
+                    </div>
+                    <ul class="drop-down-menu text-muted fs-8">
+                        <li>Tất cả nghành nghề</li>
+                        <li class="active-choose">Biên / Phiên dịch</li>
+                        <li>Báo chí / Truyền Hình</li>
+                        <li>Bưu chính - Viễn Thông</li>
+                        <li>Bảo hiểm</li>
+                        <li>Bất động sản</li>
+                    </ul>
+                </div>
+                <div class="drop-down">
+                    <div class="drop-down-header">
+                        <div class="text-muted fs-8">Tất cả thiết kế</div>
+                        <span></span>
+                    </div>
+                    <ul class="drop-down-menu text-muted fs-8">
+                        <li>Tất cả thiết kế</li>
+                        <li class="active-choose">Đơn giản</li>
+                        <li>Tiếng Nhật</li>
+                        <li>Thanh lịch</li>
+                        <li>Kinh nghiệm</li>
+                        <li>Màu sắc</li>
+                        <li>Sáng tạo</li>
+                        <li>Chuyên nghiệp</li>
+                    </ul>
+                </div>
+                <div class="sort">
+                    <h4 class="fs-5">Sắp xếp</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Mới cập nhật
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Được dùng nhiều nhất
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 album-cv" id="list-cv">
+                <!-- <div class="item-cv shadow-lg bg-body rounded">    
+                    <div class="img-cv" style="position: relative;">
+                        <img class="image-cv-img" src="./assets/imgs/mau-cv-1.png" alt="">
+                        <div class="hover-cv">
+                            <button class="open-cv-btn">
+                                <i class="fa-solid fa-eye fs-5"></i>
+                                Sử dụng mẫu này
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="title-cv" class="title-cv fs-5">
+                        Mẫu cv 1
+                    </div>
+                    <div class="pick-color-no-change">
+                        <div class="color-item orange"></div>
+                        <div class="color-item grean"></div>
+                        <div class="color-item blue"></div>
+                        <div class="color-item face-blue"></div>
+                    </div>
+                    <div class="join-cv">
+                        <div class="modal-cv shadow-lg">
+                            <div class="circle" style="background-color: rgba(254, 129, 60, .05);"></div>
+                            <div class="profile profile-1">
+                                <div class="left-pro">
+                                    <div class="experience cv-block">
+                                        <div class="title-pro title-pro-1" style="background-color: #ff823c;">
+                                            <span>
+                                                <i class="fa-solid fa-circle"></i>
+                                                Kinh nghiệm làm việc
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Nhân viên bán hàng</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>02/2021 - Hiện tại</span>
+                                                <div class="copany">Công ty Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                - Hỗ trợ viết bài quảng cáo sản phẩm qua kênh facebook, các forum,...
+                                                - Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách
+                                                hàng qua điện thoại và email.
+                                            </div>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span>Nhân viên bán hàng</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>06/2020 - 02/2021</span>
+                                                <div class="copany">Cửa hàng Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                - Bán hàng trực tiếp tại cửa hàng cho người nước ngoài và người Việt.
+                                                - Quảng bá sản phẩm thông qua các ấn phẩm truyền thông: banner, poster,
+                                                tờ rơi...
+                                                - Lập báo cáo sản lượng bán ra hàng ngày.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="education cv-block">
+                                        <div class="title-pro title-pro-1" style="background-color: #ff823c;">
+                                            <span>
+                                                <i class="fa-solid fa-circle"></i>
+                                                Học vấn
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Quản trị doanh nghiệp</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>10/2019 - 05/2020</span>
+                                                <div class="copany">Đại học Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Tốt nghiệp loại Giỏi, điểm trung bình 9.5
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-1" style="background-color: #ff823c;">
+                                            <span>
+                                                <i class="fa-solid fa-circle"></i>
+                                                Hoạt động
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Tình nguyện viên</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>10/2019- 05/2020</span>
+                                                <div class="copany">Nhóm tình nguyện Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Tập hợp các món quà và phân phát tới người vô gia cư.
+                                                - Chia sẻ, động viên họ vượt qua giai đoạn khó khăn, giúp họ có những
+                                                suy nghĩ lạc quan.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-1" style="background-color: #ff823c;">
+                                            <span>
+                                                <i class="fa-solid fa-circle"></i>
+                                                Chứng chỉ
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span>2013</span>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Giải nhất Tài năng Mindx
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="right-pro">
+                                    <div class="profile-wrapper">
+                                        <div class="pro-img">
+                                            <div class="change-avt">
+                                                <div class="change-img-avt">
+                                                    <i class="fa-solid fa-camera"></i>
+                                                </div>
+                                                <label for="upload-avt" class="upload-avt-btn">
+                                                    <i class="fa-solid fa-camera"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="pro-fullname fs-4" contenteditable="true">
+                                            Từ Tuấn Anh
+                                        </div>
+                                        <div class="profile-title fs-6" contenteditable="true">
+                                            Nhân viên kinh doanh
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-contact-wrapper">
+                                        <p class="fs-7">THÔNG TIN</p>
+                                        <div class="birth fs-8">
+                                            <div class="circle-wrapper-icon">
+                                                <i class="fa-solid fa-cake-candles"></i>
+                                            </div>
+                                            <span contenteditable="true">13/03/1995</span>
+                                        </div>
+                                        <div class="phone fs-8">
+                                            <div class="circle-wrapper-icon">
+                                                <i class="fa-solid fa-phone icon-phone"></i>
+                                            </div>
+                                            <span contenteditable="true">0788379789</span>
+                                        </div>
+                                        <div class="email fs-8">
+                                            <div class="circle-wrapper-icon">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <span contenteditable="true">tutuananh975@gmail.com</span>
+                                        </div>
+                                        <div class="website fs-8">
+                                            <div class="circle-wrapper-icon">
+                                                <i class="fa-solid fa-info"></i>
+                                            </div>
+                                            <span contenteditable="true">https://www.tutuananh.com</span>
+                                        </div>
+                                        <div class="address fs-8">
+                                            <div class="circle-wrapper-icon">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </div>
+                                            <span contenteditable="true">26 Vân Hồ 3, Hai Bà Trưng, Hà Nội</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-1" style="background-color: #ff823c;">
+                                            <span>
+                                                <i class="fa-solid fa-circle"></i>
+                                                Mục tiêu nghề nghiệp
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-details fs-8">
+                                                Áp dụng những kinh nghiệm về kỹ năng bán hàng và sự hiểu biết về thị
+                                                trường để trở thành một nhân viên bán hàng chuyên nghiệp,
+                                                mang đến nhiều giá trị cho khách hàng. Từ đó giúp Công ty tăng số lượng
+                                                khách hàng và mở rộng tập khách hàng.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-cv">
+                                <div class="fs-6 text-primary fw-semibold title-aciton">Mẫu CV 1</div>
+                                <div class="drop-down-title">
+                                    Ngôn ngữ
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-header">
+                                        <div class="text-muted fs-8">Tiếng Việt</div>
+                                        <span></span>
+                                    </div>
+                                    <ul class="drop-down-menu text-muted fs-8">
+                                        <li>Tiếng Anh</li>
+                                        <li class="active-choose">Tiếng Việt</li>
+                                        <li>Tiếng Nhật</li>
+                                    </ul>
+                                </div>
+                                <div class="drop-down-title">
+                                    Font chữ
+                                </div>
+                                <div class="drop-down">
+                                    <div class="change-font drop-down-header">
+                                        <div class="choose-font text-muted fs-8">Roboto Condensed</div>
+                                        <span></span>
+                                    </div>
+                                    <ul class="list-font drop-down-menu text-muted fs-8">
+                                        <li class="active-choose">Roboto Condensed</li>
+                                        <li>Roboto</li>
+                                        <li>Open Sans</li>
+                                        <li>Sono</li>
+                                    </ul>
+                                </div>
+                                <div class="color-title">
+                                    Màu sắc
+                                </div>
+                                <div class="pick-color">
+                                    <div class="color-item change-orange">
+                                        <i class="fa-solid fa-check icon-check-color"></i>
+                                    </div>
+                                    <div class="color-item change-grean"></div>
+                                    <div class="color-item change-blue"></div>
+                                    <div class="color-item change-face-blue"></div>
+                                </div>
+
+                                <div class="save-cv">
+                                    <button type="button" class="save-cv-btn btn btn-primary">Thêm vào kho CV</button>
+                                </div>
+
+                                <div class="out-cv">
+                                    <button type="button" class="out-cv-btn btn btn-outline-primary">Đóng lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-cv shadow-lg bg-body rounded">
+                    <div class="img-cv" style="position: relative;">
+                        <img class="image-cv-img" src="./assets/imgs/mau-cv-2.png" alt="">
+                        <div class="hover-cv">
+                            <button class="open-cv-btn">
+                                <i class="fa-solid fa-eye fs-5"></i>
+                                Sử dụng mẫu này
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="title-cv" class="title-cv fs-5">
+                        Mẫu cv 2
+                    </div>
+                    <div class="pick-color-no-change">
+                        <div class="color-item orange"></div>
+                        <div class="color-item grean"></div>
+                        <div class="color-item blue"></div>
+                        <div class="color-item face-blue"></div>
+                    </div>
+                    <div class="join-cv">
+                        <div class="modal-cv shadow-lg">
+                            <div class="profile profile-2">
+                                <div class="left-pro" style="text-align: left;">
+                                    <div class="profile-wrapper profile-wrapper-web-mau-2">
+                                        <div class="pro-img">
+                                            <div class="change-avt">
+                                                <div class="change-img-avt">
+                                                    <i class="fa-solid fa-camera"></i>
+                                                </div>
+                                                <label for="upload-avt" class="upload-avt-btn">
+                                                    <i class="fa-solid fa-camera"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="pro-fullname fs-3" contenteditable="true">
+                                            TỪ TUẤN ANH
+                                        </div>
+                                        <div class="profile-title fs-6" style="margin-top: 5px;" contenteditable="true">
+                                            NHÂN VIÊN BÁN HÀNG
+                                        </div>
+                                        <i class="icon-comment fa-sharp fa-solid fa-comments"></i>
+                                        <div class="text-commet fs-8">
+                                            Áp dụng những kinh nghiệm về kỹ năng bán hàng và sự hiểu biết về thị trường để trở thành một nhân viên bán hàng chuyên nghiệp, 
+                                            mang đến nhiều giá trị cho khách hàng. T
+                                            ừ đó giúp Công ty tăng số lượng khách hàng và mở rộng tập khách hàng.
+                                        </div>
+                                    </div>
+
+                                    <div class="experience cv-block">
+                                        <div class="title-pro title-pro-2" style="color: rgb(0, 180, 216);">
+                                            <span>
+                                                Kinh nghiệm làm việc
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Nhân viên bán hàng</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>02/2021 - Hiện tại</span>
+                                                <div class="copany">Công ty Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                - Hỗ trợ viết bài quảng cáo sản phẩm qua kênh facebook, các forum,...
+                                                - Giới thiệu, tư vấn sản phẩm, giải đáp các vấn đề thắc mắc của khách
+                                                hàng qua điện thoại và email.
+                                            </div>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span>Nhân viên bán hàng</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>06/2020 - 02/2021</span>
+                                                <div class="copany">Cửa hàng Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                - Bán hàng trực tiếp tại cửa hàng cho người nước ngoài và người Việt.
+                                                - Quảng bá sản phẩm thông qua các ấn phẩm truyền thông: banner, poster,
+                                                tờ rơi...
+                                                - Lập báo cáo sản lượng bán ra hàng ngày.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-2" style="color: rgb(0, 180, 216);">
+                                            <span>
+                                                Hoạt động
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Tình nguyện viên</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>10/2019- 05/2020</span>
+                                                <div class="copany">Nhóm tình nguyện Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Tập hợp các món quà và phân phát tới người vô gia cư.
+                                                - Chia sẻ, động viên họ vượt qua giai đoạn khó khăn, giúp họ có những
+                                                suy nghĩ lạc quan.
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                </div>
+
+                                <div class="right-pro" style="background-color: rgb(0, 180, 216, .05);">
+                                    <div class="profile-contact-wrapper">
+                                        <div class="birth fs-8">
+                                            <div class="circle-wrapper-icon" style="background-color: rgb(0, 180, 216);">
+                                                <i class="fa-solid fa-cake-candles"></i>
+                                            </div>
+                                            <span contenteditable="true">13/03/1995</span>
+                                        </div>
+                                        <div class="phone fs-8">
+                                            <div class="circle-wrapper-icon" style="background-color: rgb(0, 180, 216);">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <span contenteditable="true">0788379789</span>
+                                        </div>
+                                        <div class="email fs-8">
+                                            <div class="circle-wrapper-icon" style="background-color: rgb(0, 180, 216);">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <span contenteditable="true">tutuananh975@gmail.com</span>
+                                        </div>
+                                        <div class="website fs-8">
+                                            <div class="circle-wrapper-icon" style="background-color: rgb(0, 180, 216);">
+                                                <i class="fa-solid fa-info"></i>
+                                            </div>
+                                            <span contenteditable="true">https://www.tutuananh.com</span>
+                                        </div>
+                                        <div class="address fs-8">
+                                            <div class="circle-wrapper-icon" style="background-color: rgb(0, 180, 216);">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </div>
+                                            <span contenteditable="true">26 Vân Hồ 3, Hai Bà Trưng, Hà Nội</span>
+                                        </div>
+                                    </div>
+                                    <div class="education cv-block">
+                                        <div class="title-pro title-pro-2" style="color: rgb(0, 180, 216);">
+                                            <span>
+                                                Học vấn
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span class="position">Quản trị doanh nghiệp</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span>10/2019 - 05/2020</span>
+                                                <div class="copany">Đại học Mindx</div>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Tốt nghiệp loại Giỏi, điểm trung bình 9.5
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-2" style="color: rgb(0, 180, 216);">
+                                            <span>
+                                                Chứng chỉ
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-title fs-7">
+                                                <span>2013</span>
+                                            </div>
+                                            <div class="row-cv-details fs-8">
+                                                Giải nhất Tài năng Mindx
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity cv-block">
+                                        <div class="title-pro title-pro-2" style="color: rgb(0, 180, 216);">
+                                            <span>
+                                                Mục tiêu nghề nghiệp
+                                            </span>
+                                        </div>
+                                        <div class="row-cv" contenteditable="true">
+                                            <div class="row-cv-details fs-8">
+                                                Áp dụng những kinh nghiệm về kỹ năng bán hàng và sự hiểu biết về thị
+                                                trường để trở thành một nhân viên bán hàng chuyên nghiệp,
+                                                mang đến nhiều giá trị cho khách hàng. Từ đó giúp Công ty tăng số lượng
+                                                khách hàng và mở rộng tập khách hàng.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-cv">
+                                <div class="fs-6 text-primary fw-semibold title-aciton">Mẫu CV 2</div>
+                                <div class="drop-down-title">
+                                    Ngôn ngữ
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-header">
+                                        <div class="text-muted fs-8">Tiếng Việt</div>
+                                        <span></span>
+                                    </div>
+                                    <ul class="drop-down-menu text-muted fs-8">
+                                        <li>Tiếng Anh</li>
+                                        <li class="active-choose">Tiếng Việt</li>
+                                        <li>Tiếng Nhật</li>
+                                    </ul>
+                                </div>
+                                <div class="drop-down-title">
+                                    Font chữ
+                                </div>
+                                <div class="drop-down">
+                                    <div class="change-font drop-down-header">
+                                        <div class="choose-font text-muted fs-8">Roboto Condensed</div>
+                                        <span></span>
+                                    </div>
+                                    <ul class="list-font drop-down-menu text-muted fs-8">
+                                        <li class="active-choose">Roboto Condensed</li>
+                                        <li>Roboto</li>
+                                        <li>Open Sans</li>
+                                        <li>Sono</li>
+                                    </ul>
+                                </div>
+                                <div class="color-title">
+                                    Màu sắc
+                                </div>
+                                <div class="pick-color">
+                                    <div class="color-item change-orange">
+                                        <i class="fa-solid fa-check icon-check-color"></i>
+                                    </div> 
+                                    <div class="color-item change-grean"></div>
+                                    <div class="color-item change-blue"></div>
+                                    <div class="color-item change-face-blue"></div>   
+                                </div>
+
+                                <div class="save-cv">
+                                    <button type="button" class="save-cv-btn btn btn-primary">Thêm vào kho CV</button>
+                                </div>
+
+                                <div class="out-cv">
+                                    <button type="button" class="out-cv-btn btn btn-outline-primary">Đóng lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="no-user">
+                <div class="modal-no-user">
+                    <div class="message-alert fs-4">
+                        Bạn phải đăng nhập để thực hiện chức năng này!
+                    </div>
+                    <button id="change-login" type="button" class="btn btn-primary" style="margin-bottom: 5px;">Đăng
+                        nhập</button>
+                    <button id="exit-modal-no-user" type="button" class="btn btn-secondary">Thoát</button>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/cv.js"></script>
+    <script src="https://kit.fontawesome.com/375b580dbf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
